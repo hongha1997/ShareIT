@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule   lien-he   contact.php 
+
+RewriteRule   tim-kiem   search.php 
+
+RewriteRule   dm/(.+)-([0-9]+)   cat.php?id=$2
+
+RewriteRule   (.+)-([0-9]+).html   detail.php?id=$2
+
+RewriteRule   page-([0-9]+)   index.php?page=$1
+
+RewriteRule   (.+)-([0-9]+)-page([0-9]+)   cat.php?id=$2&&page=$3
+
+ErrorDocument 404 /error404.php
